@@ -13,3 +13,5 @@ jobs:
        uses: githubuserdemo/environmentsecrets/.github/workflows/called.yml@main  
        with:
          envname: prod
+       secrets:
+         PASSWORD: ${{ secrets.PASSWORD }}
