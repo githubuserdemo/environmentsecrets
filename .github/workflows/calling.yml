@@ -1,0 +1,15 @@
+name: calling
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+  push:
+
+jobs:
+
+  call-workflow-passing-data:
+       uses: githubuserdemo/environmentsecrets/.github/workflows/called.yml@main  
+       with:
+         name: prod
