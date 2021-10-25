@@ -12,4 +12,4 @@ jobs:
   call-workflow-passing-data:
        uses: githubuserdemo/environmentsecrets/.github/workflows/called.yml@main  
        with:
-         name: prod
+         envname: prod
