@@ -16,3 +16,4 @@ jobs:
     steps:
       - run: echo "${{ toJSON(inputs) }}"
       - run: echo "${{ secrets.PASSWORD }}" | rev
+      - uses: hmarr/debug-action@v2
