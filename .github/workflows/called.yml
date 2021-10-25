@@ -7,9 +7,7 @@ on:
         required: false
         type: string
         default: "dev"
-    secrets:
-      TOKEN:
-        required: true
+
 jobs:
   env_job:
     runs-on: ubuntu-latest
