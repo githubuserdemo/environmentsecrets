@@ -1,0 +1,20 @@
+name: called
+
+on:
+  workflow_call:
+    inputs:
+      envname:
+        required: false
+        type: string
+        default: "dev"
+    secrets:
+      TOKEN:
+        required: true
+jobs:
+  env_job:
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ inputs.envname }}
+    steps:
+      - run: echo "${{ toJSON(inputs) }}"
+      - run: echo "${{ secrets.PASSWORD }}" | rev
